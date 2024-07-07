@@ -1,0 +1,35 @@
+{
+   "title": "Raspberry Pi LoRa App initialization file",
+   "description": [ "Define runtime configurations",
+                    "RADIO_LORA_*: See SX128x.hpp for definitions"],
+   
+   "config": {
+      
+      "APP_CFE_NAME": "LORA_TX",
+      "APP_PERF_ID":  128,
+      
+      "APP_CMD_PIPE_NAME":  "LORA_TX_CMD",
+      "APP_CMD_PIPE_DEPTH": 10,
+      
+      "LORA_CMD_TOPICID": 6248,
+      "BC_SCH_1_HZ_TOPICID": 6224,
+      "LORA_STATUS_TLM_TOPICID": 2164,
+      "LORA_RADIO_TLM_TOPICID": 2165,
+      
+      "RX_CHILD_NAME":       "LORA_RX_CHILD",
+      "RX_CHILD_PERF_ID":    44,
+      "RX_CHILD_STACK_SIZE": 16384,
+      "RX_CHILD_PRIORITY":   80,
+
+      "TX_CHILD_SEM_NAME":   "LORA_TX_SEM",
+      "TX_CHILD_NAME":       "LORA_TX_CHILD",
+      "TX_CHILD_PERF_ID":    45,
+      "TX_CHILD_STACK_SIZE": 16384,
+      "TX_CHILD_PRIORITY":   80,
+
+      "RADIO_FREQUENCY": 2400,
+      "RADIO_LORA_SF":      4,
+      "RADIO_LORA_BW":     10,
+      "RADIO_LORA_CR":    112
+  }
+}
